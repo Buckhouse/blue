@@ -154,3 +154,22 @@ body {
         font-size: 0.9rem; /* Adjust global font size if needed */
       }
     }
+/* Fixed buttons for smaller screens */
+@media (max-width: 600px) {
+    .controls {
+      position: fixed;
+      bottom: 10px; /* Adjusts distance from the bottom */
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px; /* Space between the buttons */
+      padding: 10px 0;
+      background-color: rgba(229, 226, 225, 0.9); /* Semi-transparent background */
+    }
+  
+    .arrow {
+      width: 50px; /* Slightly reduce button size for mobile */
+      height: 50px;
+    }
+  }
