@@ -173,3 +173,34 @@ body {
       height: 50px;
     }
   }
+/* Menubar styling */
+.menu-bar {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between menu items */
+    padding: 10px 0;
+    background-color: var(--background-color);
+    border-bottom: 1px solid #ddd; /* Subtle bottom border */
+    width: 100%; /* Make it span the full width */
+    position: fixed; /* Keep it at the top of the page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  body {
+    padding-top: 50px; /* Add padding to prevent content from being hidden under the menu */
+  }
+  
+  .menu-item {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    color: #666666;
+  }
