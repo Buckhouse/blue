@@ -9,11 +9,10 @@ async function fetchData() {
 
 function updateDisplay() {
     const imageData = imagesData[currentIndex];
-    document.getElementById('date').textContent = imageData.date;
     document.getElementById('image').src = imageData.imageURL;
     document.getElementById('image').alt = imageData.description;
     document.getElementById('description').textContent = imageData.description;
-    document.getElementById('pagination').textContent = `${currentIndex + 1} / ${imagesData.length}`; // Update pagination
+    // document.getElementById('pagination').textContent = `${currentIndex + 1} / ${imagesData.length}`; // Update pagination
   }
 
 document.querySelector('.left').addEventListener('click', () => {

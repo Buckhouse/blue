@@ -27,7 +27,7 @@ body {
     padding: 20px;
     gap: 20px;
   }
-  
+
   .fixed-content {
     display: flex;
     flex-direction: column;
@@ -47,10 +47,10 @@ body {
   }
   
   .description {
-    font-size: 1rem;
+    font-size: .7rem;
     line-height: 1.5;
-    min-height: 200px;
-    max-height: 200px; /* Adjust based on desired space */
+    min-height: 120px;
+    max-height: 120px; /* Adjust based on desired space */
     overflow-y: auto; /* Scroll if description exceeds max-height */
     text-align: center;
     padding-top: 60px; /* To add padding without vertical centering */
@@ -138,7 +138,7 @@ body {
       }
     
       .description {
-        font-size: 0.85rem;
+        font-size: 0.65rem;
         line-height: 1.4;
         overflow-y: hidden; /* Hide scrollbar */
         -ms-overflow-style: none;  /* For Internet Explorer and Edge */
@@ -179,14 +179,14 @@ body {
     justify-content: center; /* Center items horizontally */
     gap: 20px; /* Space between menu items */
     padding: 10px 0;
-    background-color: var(--background-color);
+    background-color: rgba(229, 226, 225, 0.9); /* 50% opacity */
     border-bottom: 1px solid #ddd; /* Subtle bottom border */
     width: 100%; /* Make it span the full width */
     position: fixed; /* Keep it at the top of the page */
     top: 0;
     left: 0;
     z-index: 1000; /* Ensure it stays above other content */
-  }
+}
   
   body {
     padding-top: 50px; /* Add padding to prevent content from being hidden under the menu */
