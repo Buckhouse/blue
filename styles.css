@@ -106,7 +106,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center; /* Center the buttons within the container */
-    background-color: rgba(229, 226, 225, 0.7);
+    background-color: rgba(229, 226, 225, 0.6);
     padding: 10px 0;
     z-index: 100;
   }
@@ -121,4 +121,22 @@ body {
     max-height: 30vh; /* Limits height to allow for scrolling */
     overflow-y: auto; /* Enables scrolling for long text */
     margin-bottom: 60px; /* Adds space above fixed controls */
+  }
+
+/* Writing list item styling */
+.writing-list-item {
+    display: block;
+    width: 100%;
+    padding: 5px 0 30px 0; /* Closer to the top line, more space below */
+    color: var(--text-color);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 2px solid var(--text-color); /* Line above each item */
+    transition: color 0.3s ease;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .writing-list-item:hover {
+    color: #666666; /* Hover color */
   }
