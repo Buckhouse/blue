@@ -1,6 +1,6 @@
 Portfolio Image Viewer
 
-This is a simple web-based portfolio viewer that displays a series of images with accompanying descriptions and dates. Users can navigate through the images using left and right arrow buttons.
+This is a simple web-based portfolio viewer that displays a series of images with accompanying descriptions and dates. Users can navigate through the images using left and right arrow buttons. The code is written in VSCode and pushed to github which is hosting the repo as a public GutHub pages site. 
 
 Features
 
@@ -10,7 +10,6 @@ Features
 	•	Customizable Styles: Uses CSS variables for easy customization of colors, fonts, and other styling details.
 	•	Interactive Controls: The left and right arrow buttons shrink slightly on click to give a tactile response.
     •	Reuseable menubar at the top of the page. 
-    •   Displays the current image number out of the total.
 
 Files
 
@@ -34,7 +33,4 @@ Customization
 
 Now I want to improve... 
 
-	•	I want to explore if there are CSS changes I can do so that the whole page is visible no matter what the browser size is... 
-    •   please help me think thorugh this
-    •   first I want to do an audit of the containers on my html. I'm worried ihave too many. 
-    •   next I want to make a plan to be able to dynamically resize everything based on the size of the browser window. 
+	•	I want to explore if there are CSS changes I can do so that the left at right bottons stay locked to the bottom of the page. And if the description text is too long, it just flows under it and the BG on the controls is .8 opacity so we can still see there's something underneath. I want to be able to scroll to see all of the overflowing text, however, so i think I'll need to extend the size of the text box so that this can happen. Pleas help me make a plan on how to do this. 

@@ -62,28 +62,13 @@ body {
   cursor: pointer;
   border-radius: 50%;
   transition: transform 0.1s ease;
+  margin: 0 10px; /* Adds a 20px gap between the buttons (10px on each side) */
 }
 
-.left {
-  left: 2.5%; /* Position 10px from the left edge of the image */
-}
 
-.right {
-  right: 2.5%; /* Position 10px from the right edge of the image */
-}
 
 .arrow:active {
   transform: translateY(-50%) scale(0.95); /* Shrink on click */
-}
-
-/* Description text */
-.description {
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
-  line-height: 1.5;
-  padding: 10px;
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
 }
 
 /* Menubar styling */
@@ -113,3 +98,27 @@ body {
 .menu-item:hover {
   color: #666666;
 }
+
+/* Controls: Fixed position at the bottom with opacity */
+.controls {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the buttons within the container */
+    background-color: rgba(229, 226, 225, 0.9);
+    padding: 10px 0;
+    z-index: 100;
+  }
+  
+  /* Description: Scrollable container */
+  .description {
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    line-height: 1.5;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    max-height: 30vh; /* Limits height to allow for scrolling */
+    overflow-y: auto; /* Enables scrolling for long text */
+    margin-bottom: 60px; /* Adds space above fixed controls */
+  }
