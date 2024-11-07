@@ -54,7 +54,7 @@ body {
 
 /* Navigation buttons positioned on either side */
 .arrow {
-  position: absolute;
+  position: relative;
   top: 47%; /* Center vertically */
   transform: translateY(-50%); /* Adjust for perfect vertical centering */
   width: clamp(40px, 5vw, 60px); /* Responsive button size */
