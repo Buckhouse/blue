@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
 :root {
   --background-color: #E5E2E1;
   --text-color: #333333;
   --button-color: #ddd;
   --button-hover-color: #bbb;
-  --font-family: 'YourFont', sans-serif;
+  --font-family: 'Inter', sans-serif;
 }
 
 body {
