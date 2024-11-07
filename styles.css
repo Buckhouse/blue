@@ -1,0 +1,154 @@
+:root {
+  --background-color: #E5E2E1;
+  --text-color: #333333;
+  --button-color: #ddd;
+  --button-hover-color: #bbb;
+  --font-family: 'YourFont', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .fixed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    overflow-y: hidden;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container {
+    height: 800px; /* Keep fixed height for image consistency */
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 200px;
+    max-height: 200px; /* Adjust based on desired space */
+    overflow-y: auto; /* Scroll if description exceeds max-height */
+    text-align: center;
+    padding-top: 60px; /* To add padding without vertical centering */
+    width: 80%; /* Set width to 80% of the container */
+    margin: 0 auto; /* Center the description within the container */
+  }
+
+.date {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.image {
+    height: 800px; /* Set a fixed height */
+    width: auto; /* Width adjusts according to the aspect ratio */
+    object-fit: cover; /* Ensures the image scales without stretching */
+    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+    border-bottom: 8px solid white; /* Bottom white stroke */
+    border-top: 8px solid #d3d3d3; /* Top grey stroke */
+    border-radius: 5px;             /* Optional: rounded corners */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+  }
+
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 20px;
+  }
+  .arrow {
+    width: 60px; /* Larger button size */
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.1s ease; /* Quick transition for click effect */
+  }
+  
+  /* Remove the scale on hover */
+  .arrow:hover {
+    transform: none;
+  }
+  
+  /* Add a "descale" effect on click */
+  .arrow:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .content-container,
+    .image-container {
+      width: 100%;
+      max-width: 100%;
+      height: auto; /* Allow height to adjust based on content */
+      margin-bottom: 0; /* Remove any extra bottom margin */
+    }
+  
+    .fixed-content {
+      max-height: none; /* Remove any max-height constraints */
+      height: auto; /* Allow dynamic height based on content */
+    }
+  
+    .image-container {
+        width: 100%;
+        overflow: hidden; /* Prevent overflow causing a scrollbar */
+      }
+    
+      .image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+  
+    .description {
+      margin-top: 10px;
+      padding-top: 10px;
+      max-height: unset; /* Allow description to flow without restriction */
+      overflow-y: visible;
+    }
+    .date {
+        font-size: 0.9rem; /* Smaller font size for date */
+      }
+    
+      .description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        overflow-y: hidden; /* Hide scrollbar */
+        -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        scrollbar-width: none;  /* For Firefox */
+      }
+    
+      /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+      .description::-webkit-scrollbar {
+        display: none;
+      }
+    
+      body {
+        font-size: 0.9rem; /* Adjust global font size if needed */
+      }
+    }

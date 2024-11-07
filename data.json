@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "date": "JAN 2021",
+      "imageURL": "./images/image_1.jpg",
+      "title": "Title of Image 1",
+      "description": "I traveled with my family to Big Sur. We walked along this beach in the early morning. This natural rock formation looked like a door to Poseidon’s lair. I loved the idea that you might walk through it an end up in a totally other world. It felt like an invitation to enter into the unknown, to leave the land of the words and clear intentions and to enter the submerged totality of the senses.",
+      "media": "Watercolor on paper. 18 in x 24 in"
+    },
+    {
+      "date": "FEB 2021",
+      "imageURL": "./images/image_2.jpg",
+      "title": "Title of Image 2",
+      "description": "This watercolor painting came out of a shoot fashion designer Lan Jaenicke did with a dancer wearing one of her coats. I quite liked the high color and the cinematic sense of a woman moving through the world like a character in an imaginary novel. She closed her eyes as if she too was imagining the story.",
+    "media": "Watercolor on paper. 18 in x 24 in"
+}
+  ]
+}
