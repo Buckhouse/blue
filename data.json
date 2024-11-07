@@ -15,10 +15,10 @@
       "media": "Watercolor on paper. 18 in x 24 in"
   },
   {
-    "date": "OCT 2022",
+    "date": "AUG 2020",
     "imageURL": "./images/image_4.jpg",
     "title": "Title of Image 3",
-    "description": "Leaf by leaf, I spent that summer painting this view from inside San Francisco's Conservatory of Flowers. This was a pandemic painting. And somehow the brilliant world inside the hothouse seemed to connect to our paradise and our prision of isolation. Watercolor on paper. 18 in x 24 in",
+    "description": "Leaf by leaf, I spent that summer painting this view from inside San Francisco's Conservatory of Flowers. This was a pandemic painting. And somehow the brilliant world inside the hothouse seemed to connect to our paradise and our prision of shared isolation. Famlies grew closer. We learned to look closely at our surroundings. Watercolor on paper. 18 in x 24 in",
   "media": "Watercolor on paper. 18 in x 24 in"
 },
 {
@@ -34,7 +34,14 @@
         "title": "Title of Image 2",
         "description": "This watercolor painting came out of a shoot fashion designer Lan Jaenicke did with a dancer wearing one of her coats. I quite liked the high color and the cinematic sense of a woman moving through the world like a character in an imaginary novel. She closed her eyes as if she too was imagining the story.",
       "media": "Watercolor on paper. 18 in x 24 in"
-  }
+  },
+  {
+    "date": "APR 2022",
+    "imageURL": "./images/image_6.jpg",
+    "title": "Title of Image 2",
+    "description": "This is a lead-holder known as the Fixpencil. It is without a doubt my favorite way to work with lead. Inside the barrel is a 3mm tube of graphite available in a dark 6B softness that pulls midnight from noon and drains the ocean’s depths into a teacup. Hidden inside the endcap is a sharpener. The lead is advanced with a push-activated clutch system. Here I’ve painted a small portrait of the Fixpencil, but instead of using it to draw itself (which felt too on the nose). I’ve rendered it in watercolor using a narrow mongoose-haired brush. Somehow the blue watercolor was a better match for the myth that surrounds this particular writing tool.",
+  "media": "Watercolor on paper. 18 in x 24 in"
+}
  
   ]
 }
