@@ -15,6 +15,13 @@
       "media": "Watercolor on paper. 18 in x 24 in"
   },
   {
+    "date": "MAR 2023",
+    "imageURL": "./images/image_6.jpg",
+    "title": "Title of Image 6",
+    "description": "This is a watercolor sketch of an AR project to bring dance to Paris. The idea is that you'd look up and see dancers the size of demigods performing across the Parisian skyline. Watercolor on paper. 18 in x 24 in",
+  "media": "Watercolor on paper. 18 in x 24 in"
+},
+  {
     "date": "AUG 2020",
     "imageURL": "./images/image_4.jpg",
     "title": "Title of Image 3",
@@ -37,11 +44,172 @@
   },
   {
     "date": "APR 2022",
-    "imageURL": "./images/image_6.jpg",
+    "imageURL": "./images/image_7.jpg",
     "title": "Title of Image 2",
     "description": "This is a lead-holder known as the Fixpencil. It is without a doubt my favorite way to work with lead. Inside the barrel is a 3mm tube of graphite available in a dark 6B softness that pulls midnight from noon and drains the ocean’s depths into a teacup. Hidden inside the endcap is a sharpener. The lead is advanced with a push-activated clutch system. Here I’ve painted a small portrait of the Fixpencil, but instead of using it to draw itself (which felt too on the nose). I’ve rendered it in watercolor using a narrow mongoose-haired brush. Somehow the blue watercolor was a better match for the myth that surrounds this particular writing tool.",
   "media": "Watercolor on paper. 18 in x 24 in"
+},
+{
+    "date": "JUL 2018",
+    "imageURL": "./images/image_8.jpg",
+    "title": "Title of Image 2",
+    "description": "Sketch of the ocean near Carmel.",
+  "media": "Watercolor on paper. 18 in x 24 in"
+},
+{
+    "date": "MAY 2018",
+    "imageURL": "./images/image_9.jpg",
+    "title": "Title of Image 2",
+    "description": "Abstraction that later set the stage for the visual vocabulary of HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+  "media": "Colored pencil on paper. 12 in x 12 in"
+},
+{
+    "date": "MAY 2018",
+    "imageURL": "./images/image_10.jpg",
+    "title": "Title of Image 2",
+    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but isntead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_11.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_12.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_13.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_14.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_15.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_16.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_17.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_18.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_19.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_20.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_21.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_22.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_23.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_24.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_25.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_26.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_27.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_28.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_29.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "SEP 2018",
+    "imageURL": "./images/image_30.jpg",
+    "title": "Title of Image 2",
+    "description": "Still from HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+    "media": "Oil on Linen. 48 in x 48 in"
 }
- 
   ]
 }
+
