@@ -10,27 +10,26 @@
     <body>
         <!-- Reusable Menubar -->
         <div class="menu-bar">
-          <a href="index.html" class="menu-item">James Buckhouse</a>
-          <a href="art.html" class="menu-item">Art</a>
-          <a href="story.html" class="menu-item">Story</a>
-          <a href="design.html" class="menu-item">Design</a>
-          <a href="film.html" class="menu-item">Film</a>
-        </div>
-        <div class="portfolio">
-        <div class="fixed-content">
-            <div class="content-container">
-                
-                <div class="image-container">
-                  <img class="image" id="image" src="" alt=""> <!-- Image src and alt will be dynamically loaded -->
-                </div>
+            <a href="index.html" class="menu-item">James Buckhouse</a>
+            <a href="art.html" class="menu-item">Art</a>
+            <a href="story.html" class="menu-item">Story</a>
+            <a href="design.html" class="menu-item">Design</a>
+            <a href="film.html" class="menu-item">Film</a>
+          </div>
+          
+          <div class="portfolio">
+            <!-- Image Section -->
+            <div class="image-container">
+              <img class="image" id="image" src="" alt=""> <!-- Dynamically loaded image -->
             </div>
-            <div class="description" id="description"></div> <!-- Description will be dynamically loaded -->
-        </div>
-        <div class="controls">
-            <img class="arrow left" src="./images/left.jpg" alt="Previous Image" aria-label="Previous Image">
-            <img class="arrow right" src="./images/right.jpg" alt="Next Image" aria-label="Next Image">
-        </div>
-    </div>
+            <!-- Description Section -->
+            <div class="description" id="description"></div> <!-- Dynamically loaded description -->
+            <!-- Navigation Controls -->
+            <div class="controls">
+              <img class="arrow left" src="./images/left.jpg" alt="Previous Image" aria-label="Previous Image">
+              <img class="arrow right" src="./images/right.jpg" alt="Next Image" aria-label="Next Image">
+            </div>
+          </div>
     <script src="scripts.js"></script>
   </body>
 </html>
