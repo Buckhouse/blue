@@ -1,8 +1,8 @@
 Portfolio Image Viewer
 
-This is a simple web-based portfolio viewer that displays a series of images with accompanying descriptions and dates. Users can navigate through the images using left and right arrow buttons. The code is written in VSCode and pushed to github which is hosting the repo as a public GutHub pages site. 
+This is a simple web-based portfolio viewer that displays a series of images with accompanying descriptions and dates. Users can navigate through the images using left and right arrow buttons. The code is written in VSCode and pushed to github which is hosting the repo as a public GutHub pages site. There are also pages for film, design, and story. 
 
-Features
+Portfolio Features
 
 	•	Image Navigation: Allows users to click between images using left and right arrow buttons.
 	•	Date and Description Display: Each image is accompanied by a date and description. 
@@ -31,6 +31,17 @@ Customization
 	•	Image and Text Data: Update data.json to add or modify images, dates, and descriptions.
 	•	Image Controls: The controls use left.jpg and right.jpg images as navigation buttons. Customize these images to change the look of the navigation.
 
+Story page: 
+
+    •   an image and  a list of links
+
+Design page: 
+    •   this will eventually hold an iframe
+
+Film page: 
+
+    •   an image and a list of links. 
+
 Now I want to improve... 
 
-	•	I want to explore if there are CSS changes I can do so that the left at right bottons stay locked to the bottom of the page. And if the description text is too long, it just flows under it and the BG on the controls is .8 opacity so we can still see there's something underneath. I want to be able to scroll to see all of the overflowing text, however, so i think I'll need to extend the size of the text box so that this can happen. Pleas help me make a plan on how to do this. 
+•   I want to add a short paragraph on the film page after the image, but before the lsit of links. 

@@ -50,11 +50,6 @@ for article in articles:
     parsed_url = urlparse(link)
     cleaned_url = urlunparse(parsed_url._replace(query=""))
 
-    # Truncate the title if it’s too long or contains multiple lines
-    if len(title) > 100 or "\n" in title:
-        title = title.split("\n")[0]  # Keep only the first line
-        title = title[:100]  # Limit to 100 characters
-
     # Filter only links that match the Medium article URL pattern
     if article_pattern.match(cleaned_url) and cleaned_url not in seen_links:
         formatted_links.append(f'<a href="{cleaned_url}" class="writing-list-item">{title}</a>')

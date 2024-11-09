@@ -19,24 +19,17 @@
           
           <div class="portfolio">
             <!-- Image Section -->
-             
-<script id="delphi-page-script">
-    window.delphi = {...(window.delphi ?? {}) };
-    window.delphi.page = {
-      config: "750b5c63-4cf8-47d5-945d-9ee7f18bf59f",
-      overrides: {
-        landingPage: "OVERVIEW",
-      },
-      container: {
-        width: "100%",
-        height: "800px",
-      },
-    };
-  </script>
-  
-  <script id="delphi-page-bootstrap" src="https://embed.delphi.ai/loader.js"></script>
-  
-               
-  <script src="scripts.js"></script>
- </body>
+            <div class="image-container">
+              <img class="image" id="image" src="" alt=""> <!-- Dynamically loaded image -->
+            </div>
+            <!-- Description Section -->
+            <div class="description" id="description"></div> <!-- Dynamically loaded description -->
+            <!-- Navigation Controls -->
+            <div class="controls">
+              <img class="arrow left" src="./images/left.jpg" alt="Previous Image" aria-label="Previous Image">
+              <img class="arrow right" src="./images/right.jpg" alt="Next Image" aria-label="Next Image">
+            </div>
+          </div>
+    <script src="scripts.js"></script>
+  </body>
 </html>
