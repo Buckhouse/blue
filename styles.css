@@ -43,7 +43,7 @@ body {
 
 .image {
   max-width: 95%; /* Keeps image within container */
-  max-height: 80vh;
+  max-height: 60vh;
   object-fit: contain;
   border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
   border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
@@ -115,7 +115,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center; /* Center the buttons within the container */
-    background-color: rgba(229, 226, 225, 0.6);
+    background-color: rgba(229, 226, 225, 0.8);
     padding: 10px 0;
     z-index: 100;
   }
@@ -151,7 +151,7 @@ body {
   }
 
   .film-description {
-    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    font-size: clamp(.9rem, 1.3vw, 1rem);
     line-height: 1.6;
     color: var(--text-color);
     text-align: center;
@@ -161,6 +161,28 @@ body {
     margin-left: auto; /* Center aligns the element */
     margin-right: auto; /* Center aligns the element */
 }
+
+.film-image {
+    max-width: 95%; /* Keeps image within container */
+    max-height: 40vh;
+    object-fit: contain;
+    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+    border-bottom: 8px solid white; /* Bottom white stroke */
+    border-top: 8px solid #d3d3d3; /* Top grey stroke */
+    border-radius: 5px; /* Optional: rounded corners */
+  }
+
+  .story-image {
+    max-width: 95%; /* Keeps image within container */
+    max-height: 40vh;
+    object-fit: contain;
+    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+    border-bottom: 8px solid white; /* Bottom white stroke */
+    border-top: 8px solid #d3d3d3; /* Top grey stroke */
+    border-radius: 5px; /* Optional: rounded corners */
+  }
 .index_image {
     width: 100%; /* Adjust width to fully span the container */
     max-width: 90%; /* Limit the max width within the container */
