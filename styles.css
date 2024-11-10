@@ -43,7 +43,7 @@ body {
 
 .image {
   max-width: 95%; /* Keeps image within container */
-  max-height: 60vh;
+  max-height: 80vh;
   object-fit: contain;
   border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
   border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
@@ -175,7 +175,7 @@ body {
 
   .story-image {
     max-width: 95%; /* Keeps image within container */
-    max-height: 40vh;
+    max-height: 80vh;
     object-fit: contain;
     border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
     border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
