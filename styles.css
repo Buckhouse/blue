@@ -24,7 +24,7 @@ body {
   margin: 0;
   padding: 0;
   /* Set the background image */
-  background-image: url('./images/image_1.jpg');
+  background-image: url('./images/image_1_bg.jpg');
   /* Ensure the image covers the entire background area */
   background-size: cover;
   /* Center the image */
