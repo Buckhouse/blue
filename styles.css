@@ -6,6 +6,7 @@
   --button-color: #ddd;
   --button-hover-color: #bbb;
   --font-family: 'Inter', sans-serif;
+  --link-color: #00223A;
   --alt_font-family: 'Georgia', serif;
 }
 
@@ -100,7 +101,7 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 10px 0;
-  background-color: rgba(245, 243, 242, 0.9);
+  background-color: rgba(245, 243, 242, 0.4);
   border-bottom: 1px solid #ddd;
   width: 100%;
   position: fixed;
@@ -176,6 +177,18 @@ body {
     margin-right: auto; /* Center aligns the element */
 }
 
+.about-description {
+  font-size: clamp(.9rem, 1.3vw, 1rem);
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  max-width: 75%; /* 80% of the parent container's width */
+  margin-left: auto; /* Center aligns the element */
+  margin-right: auto; /* Center aligns the element */
+}
+
 .film-image {
     max-width: 95%; /* Keeps image within container */
     max-height: 40vh;
@@ -212,4 +225,26 @@ body {
     max-width: 80%; /* Keeps images within the container width */
     margin-left: 27%;
     margin-top: 7%;
+}
+
+/* Global link styles */
+a {
+  color: var(--link-color); /* Default link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make links bold */
+}
+
+/* Visited link styles */
+a:visited {
+  color: var(--link-color); /* Change the color for visited links */
+}
+
+/* Optional: Add hover and active states for interactivity */
+a:hover {
+  color: var(--link-color); /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+a:active {
+  color: #cc0000; /* Change color when the link is clicked */
 }
