@@ -20,6 +20,20 @@ body {
   padding-top: 60px; /* Accounts for fixed menubar */
   font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Dynamic font scaling */
 }
+.index-page {
+  margin: 0;
+  padding: 0;
+  /* Set the background image */
+  background-image: url('./images/image_1.jpg');
+  /* Ensure the image covers the entire background area */
+  background-size: cover;
+  /* Center the image */
+  background-position: center center;
+  /* Prevent the image from repeating */
+  background-repeat: no-repeat;
+  /* Optional: Keep the background fixed during scroll */
+  /* background-attachment: fixed; */
+}
 
 /* Portfolio container */
 .portfolio {
