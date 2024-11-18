@@ -1,11 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
+@font-face {
+  font-family: 'Pitch Sans';
+  src: url('fonts/PitchSansApp-Regular.woff2') format('truetype'); /* Specify the file and format */
+  font-weight: normal; /* Regular weight */
+  font-style: normal; /* Regular style */
+}
+
+@font-face {
+  font-family: 'Rosart';
+  src: url('fonts/Rosart-Regular.woff2') format('truetype'); /* Specify the file and format */
+  font-weight: normal; /* Regular weight */
+  font-style: normal; /* Regular style */
+}
+
+@font-face {
+  font-family: 'Unica';
+  src: url('fonts/Unica77LLWeb-Regular.woff') format('truetype'); /* Specify the file and format */
+  font-weight: normal; /* Regular weight */
+  font-style: normal; /* Regular style */
+}
+
+@font-face {
+  font-family: 'Unica Bold';
+  src: url('fonts/Unica77LLWeb-Bold.woff') format('truetype'); /* Specify the file and format */
+  font-weight: bold; /* Regular weight */
+  font-style: normal; /* Regular style */
+}
+
+
 :root {
   --background-color: #E5E2E1;
   --text-color: #333333;
   --button-color: #ddd;
   --button-hover-color: #bbb;
-  --font-family: 'Inter', sans-serif;
+  --font-family: 'Unica', sans-serif;
+  --bold-font-family: 'Unica Bold', sans-serif;
+  --menu-font-family: 'Pitch Sans', sans-serif;
   --link-color: #00223A;
   --alt_font-family: 'Georgia', serif;
 }
@@ -19,7 +50,7 @@ body {
   margin: 0;
   min-height: 100vh;
   padding-top: 60px; /* Accounts for fixed menubar */
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem); /* Dynamic font scaling */
+  font-size: clamp(1rem, 1.5vw, 1.1rem); /* Dynamic font scaling */
 }
 .index-page {
   margin: 0;
@@ -111,12 +142,13 @@ body {
 }
 
 .menu-item {
-  font-family: var(--font-family);
+  font-family: var(--menu-font-family);
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  text-transform: uppercase; /* Makes text all caps */
 }
 
 .menu-item:hover {
@@ -184,7 +216,7 @@ body {
   text-align: left;
   margin-top: 15px;
   margin-bottom: 15px;
-  max-width: 75%; /* 80% of the parent container's width */
+  max-width: 65ch; /* Limits the text to approximately 65 characters per line */
   margin-left: auto; /* Center aligns the element */
   margin-right: auto; /* Center aligns the element */
 }
@@ -231,7 +263,7 @@ body {
 a {
   color: var(--link-color); /* Default link color */
   text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Make links bold */
+  font-family: var(--bold-font-family);
 }
 
 /* Visited link styles */

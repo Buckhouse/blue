@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: 'image1', inSrc: './images/story_in.png', outSrc: './images/story_out.png' },
     { id: 'image2', inSrc: './images/art_in.png', outSrc: './images/art_out.png' },
     { id: 'image3', inSrc: './images/design_in.png', outSrc: './images/design_out.png' },
-    { id: 'image4', inSrc: './images/film_in.png', outSrc: './images/film_out.png' }
+    { id: 'image4', inSrc: './images/film_in.png', outSrc: './images/film_out.png' },
+    { id: 'image5', inSrc: './images/buckhouse_in.png', outSrc: './images/buckhouse_out.png' }
   ];
 
   images.forEach(image => {
