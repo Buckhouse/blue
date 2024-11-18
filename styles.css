@@ -31,6 +31,7 @@
 
 :root {
   --background-color: #E5E2E1;
+  --semi-background-color: rgba(229, 226, 225, 0.8);
   --text-color: #333333;
   --button-color: #ddd;
   --button-hover-color: #bbb;
@@ -279,4 +280,88 @@ a:hover {
 
 a:active {
   color: #cc0000; /* Change color when the link is clicked */
+}
+
+/* Overlay container */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--semi-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure overlay is on top */
+}
+
+/* Overlay content */
+/* Overlay container */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--semi-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure overlay is on top */
+}
+
+/* Overlay content */
+.overlay-content {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  background-color: var(--semi-background-color);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 90%;
+  border-radius: 8px;
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.overlay-content::-webkit-scrollbar {
+  display: none;  /* For Chrome, Safari, and Opera */
+}
+
+/* Close button */
+/* Close button */
+.close-button {
+  position: absolute;
+  top: -10px;    /* Move the button closer to the top */
+  right: -10px; /* Move the button closer to the right edge */
+  font-size: 48px; /* Increase the font size to make it bigger */
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: calc(25% - 10px); /* Four images per row */
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.gallery-grid img:hover {
+  opacity: 0.8;
 }
