@@ -1,97 +1,435 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+/* =========================================
+   Global CSS Variables and Font Imports
+   ========================================= */
 
-@font-face {
-  font-family: 'Pitch Sans';
-  src: url('fonts/PitchSansApp-Regular.woff2') format('truetype'); /* Specify the file and format */
-  font-weight: normal; /* Regular weight */
-  font-style: normal; /* Regular style */
-}
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-@font-face {
-  font-family: 'Rosart';
-  src: url('fonts/Rosart-Regular.woff2') format('truetype'); /* Specify the file and format */
-  font-weight: normal; /* Regular weight */
-  font-style: normal; /* Regular style */
-}
+   @font-face {
+     font-family: 'Pitch Sans';
+     src: url('fonts/PitchSansApp-Regular.woff2') format('truetype'); /* Specify the file and format */
+     font-weight: normal; /* Regular weight */
+     font-style: normal; /* Regular style */
+   }
+   
+   @font-face {
+     font-family: 'Rosart';
+     src: url('fonts/Rosart-Regular.woff2') format('truetype'); /* Specify the file and format */
+     font-weight: normal; /* Regular weight */
+     font-style: normal; /* Regular style */
+   }
+   
+   @font-face {
+     font-family: 'Unica';
+     src: url('fonts/Unica77LLWeb-Regular.woff') format('truetype'); /* Specify the file and format */
+     font-weight: normal; /* Regular weight */
+     font-style: normal; /* Regular style */
+   }
+   
+   @font-face {
+     font-family: 'Unica Bold';
+     src: url('fonts/Unica77LLWeb-Bold.woff') format('truetype'); /* Specify the file and format */
+     font-weight: bold; /* Bold weight */
+     font-style: normal; /* Regular style */
+   }
+   
+   :root {
+     --background-color: #E5E2E1;
+     --semi-background-color: rgba(229, 226, 225, 0.8);
+     --text-color: #333333;
+     --button-color: #ddd;
+     --button-hover-color: #bbb;
+     --font-family: 'Unica', sans-serif;
+     --bold-font-family: 'Unica Bold', sans-serif;
+     --menu-font-family: 'Pitch Sans', sans-serif;
+     --link-color: #00223A;
+     --alt_font-family: 'Georgia', serif;
+     --optical-center-offset: 5%; /* Adjust this value to fine-tune positioning */
+   }
+   
+   /* =========================================
+      General Styles
+      ========================================= */
+   
+   body {
+     background-color: var(--background-color);
+     color: var(--text-color);
+     font-family: var(--font-family);
+     display: flex;
+     justify-content: center;
+     margin: 0;
+     min-height: 100vh;
+     padding-top: 60px; /* Accounts for fixed menubar */
+     font-size: clamp(1rem, 1.5vw, 1.1rem); /* Dynamic font scaling */
+   }
+   
+   /* =========================================
+      Menubar Styling
+      ========================================= */
+   
+   .menu-bar {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     padding: 10px 0;
+     background-color: rgba(245, 243, 242, 0.4);
+     border-bottom: 1px solid #ddd;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+   }
+   
+   .menu-item {
+     font-family: var(--menu-font-family);
+     font-size: clamp(0.8rem, 1.5vw, 1rem);
+     color: var(--text-color);
+     text-decoration: none;
+     font-weight: 500;
+     transition: color 0.3s ease;
+     text-transform: uppercase; /* Makes text all caps */
+   }
+   
+   .menu-item:hover {
+     color: #666666;
+   }
+   
+   /* =========================================
+      Content Shell Container (General Centering)
+      ========================================= */
+   
+   .content_shell {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; /* Optical centering */
+     min-height: 80vh;
+     transform: translateY(calc(-1 * var(--optical-center-offset)));
+     background-color: var(--background-color);
+     padding-top: 15%; /* Accounts for fixed menubar */
+     padding-bottom: 100px; /* Prevents content from being hidden behind controls */
+   }
+   
+   /* =========================================
+      Portfolio Art Container (Specific to art.html)
+      ========================================= */
+   
+   .portfolio_art {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center; /* Optical centering */
+     min-height: 100vh;
+     transform: translateY(calc(-1 * var(--optical-center-offset)));
+     background-color: var(--background-color);
+     padding-top: 0%; /* Accounts for fixed menubar */
+     padding-bottom: 120px; /* Increased to accommodate fixed controls */
+   }
+   
+   /* =========================================
+      Image Container and Image Styling
+      ========================================= */
+   
+   .image-container {
+     position: relative; /* Allows positioning of arrows */
+     max-width: 90%; /* Limits width so there is space for buttons */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   
+   .image {
+     width: auto;
+     height: auto;
+     max-width: 90vw; /* Ensures the image doesn't exceed viewport width */
+     max-height: 90vh; /* Fallback in case JavaScript doesn't run */
+     border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+     border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+     border-bottom: 8px solid white; /* Bottom white stroke */
+     border-top: 8px solid #d3d3d3; /* Top grey stroke */
+     border-radius: 5px; /* Optional: rounded corners */
+   }
+   
+   /* Existing Image Classes with Custom Borders */
+   
+   .film-image {
+    max-width: 95%; /* Keeps image within container */
+    object-fit: contain;
+    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+    border-bottom: 8px solid white; /* Bottom white stroke */
+    border-top: 8px solid #d3d3d3; /* Top grey stroke */
+    border-radius: 5px; /* Optional: rounded corners */
+  }
 
-@font-face {
-  font-family: 'Unica';
-  src: url('fonts/Unica77LLWeb-Regular.woff') format('truetype'); /* Specify the file and format */
-  font-weight: normal; /* Regular weight */
-  font-style: normal; /* Regular style */
-}
+   .story-image {
+     max-width: 95%; /* Keeps image within container */
+     object-fit: contain;
+     border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+     border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+     border-bottom: 8px solid white; /* Bottom white stroke */
+     border-top: 8px solid #d3d3d3; /* Top grey stroke */
+     border-radius: 5px; /* Optional: rounded corners */
+   }
+   
+   .index_image {
+     width: 100%; /* Adjust width to fully span the container */
+     max-width: 90%; /* Limit the max width within the container */
+     max-height: 60vh; /* Keep a max height to avoid overly tall images */
+     object-fit: contain;
+     border-radius: 5px; /* Optional rounded corners */
+   }
+   
+   /* =========================================
+      Navigation Buttons Styling - Fixed to Bottom
+      ========================================= */
+   
+   .controls {
+     position: fixed; /* Fixes the position relative to the viewport */
+     bottom: 20px; /* Positions the controls 20px from the bottom */
+     left: 50%; /* Centers the controls horizontally */
+     transform: translateX(-50%); /* Adjusts for the 50% left positioning to truly center */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px; /* Spacing between controls */
+     background-color: rgba(229, 226, 225, 0.8); /* Semi-transparent background for visibility */
+     padding: 10px 20px; /* Padding for better click targets and aesthetics */
+     border-radius: 10px; /* Rounded corners for the controls container */
+     z-index: 1001; /* Ensures controls are above other content but below overlays */
+   }
+   
+   .controls img.arrow {
+     width: clamp(40px, 5vw, 60px); /* Responsive button size */
+     height: clamp(40px, 5vw, 60px);
+     cursor: pointer;
+     border-radius: 50%;
+     transition: opacity 0.3s ease, transform 0.1s ease;
+   }
+   
+   .controls img.arrow:hover {
+     opacity: 0.8; /* Hover effect */
+   }
+   
+   .controls img.arrow:active {
+     transform: scale(0.95); /* Slight shrink on click for feedback */
+   }
+   
+   /* =========================================
+      Description Styling
+      ========================================= */
+   
+   .description {
+     max-height: 20vh; /* Limits height to 20% of viewport */
+     overflow-y: auto; /* Allows scrolling if content exceeds max-height */
+     max-width: 65ch; /* Limits line length to 65 characters */
+     margin: 1em auto;
+     padding: 0 1em;
+     text-align: center;
+   }
+   
+   /* =========================================
+      Writing List Item Styling
+      ========================================= */
+   
+   .writing-list-item {
+     display: block;
+     width: 90%;
+     padding: 5px 0 30px 0; /* Closer to the top line, more space below */
+     color: var(--text-color);
+     font-size: clamp(1rem, 2vw, 1.2rem);
+     font-weight: 600;
+     text-decoration: none;
+     border-top: 2px solid var(--text-color); /* Line above each item */
+     transition: color 0.3s ease;
+     text-align: left; /* Align text to the left */
+   }
+   
+   .writing-list-item:hover {
+     color: #00628C; /* Hover color */
+   }
+   
+   /* =========================================
+      Specific Description Styling
+      ========================================= */
+   
+   .film-description {
+     font-size: clamp(.9rem, 1.3vw, 1rem);
+     line-height: 1.6;
+     color: var(--text-color);
+     text-align: center;
+     margin-top: 15px;
+     margin-bottom: 15px;
+     max-width: 75%; /* 75% of the parent container's width */
+     margin-left: auto; /* Center aligns the element */
+     margin-right: auto; /* Center aligns the element */
+   }
+   
+   .about-description {
+     font-size: clamp(.9rem, 1.3vw, 1rem);
+     line-height: 1.6;
+     color: var(--text-color);
+     text-align: left;
+     margin-top: 15px;
+     margin-bottom: 15px;
+     max-width: 65ch; /* Limits the text to approximately 65 characters per line */
+     margin-left: auto; /* Center aligns the element */
+     margin-right: auto; /* Center aligns the element */
+   }
+   
+   /* =========================================
+      Specific Image Styling
+      ========================================= */
+   
+   .film-image,
+   .story-image {
+     /* Already defined above with border styles */
+   }
+   
+   .index_image-container {
+     display: flex;
+     flex-direction: column; /* Stack images vertically */
+     align-items: center;
+     gap: 20px; /* Add spacing between images */
+     max-width: 80%; /* Keeps images within the container width */
+     margin-left: 15%;
+     margin-top: 7%;
+   }
+   
+   /* =========================================
+      Global Link Styles
+      ========================================= */
+   
+   a {
+     color: var(--link-color); /* Default link color */
+     text-decoration: none; /* Remove underline */
+     font-family: var(--bold-font-family);
+   }
+   
+   a:visited {
+     color: var(--link-color); /* Change the color for visited links */
+   }
+   
+   a:hover {
+     color: var(--link-color); /* Change color on hover */
+     text-decoration: underline; /* Underline on hover */
+   }
+   
+   a:active {
+     color: #cc0000; /* Change color when the link is clicked */
+   }
+   
+   /* =========================================
+      Gallery Overlay Styles
+      ========================================= */
+   
+   /* Overlay container */
+   .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: var(--semi-background-color);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1000; /* Ensure overlay is on top */
+   }
+   
+   /* Overlay content */
+   .overlay-content {
+     position: relative;
+     width: 80%;
+     max-width: 1000px;
+     margin: auto;
+     background-color: var(--semi-background-color);
+     padding: 20px;
+     overflow-y: auto;
+     max-height: 90%;
+     border-radius: 8px;
+   
+     /* Hide scrollbar */
+     scrollbar-width: none; /* For Firefox */
+     -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+   }
+   
+   .overlay-content::-webkit-scrollbar {
+     display: none;  /* For Chrome, Safari, and Opera */
+   }
+   
+   /* Close button */
+   .close-button {
+     position: absolute;
+     top: -10px;    /* Move the button slightly above the content */
+     right: -10px;  /* Move the button slightly to the right of the content */
+     font-size: 48px; /* Increase the font size to make it bigger */
+     background: none;
+     border: none;
+     color: #aaa;
+     cursor: pointer;
+     z-index: 1001; /* Ensure it stays on top of other elements */
+   }
+   
+   .close-button:hover {
+     color: #000;
+   }
+   
+   /* Gallery grid */
+   .gallery-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+   }
+   
+   .gallery-grid img {
+     width: calc(25% - 10px); /* Four images per row */
+     cursor: pointer;
+     border-radius: 4px;
+   }
+   
+   .gallery-grid img:hover {
+     opacity: 0.8;
+   }
 
-@font-face {
-  font-family: 'Unica Bold';
-  src: url('fonts/Unica77LLWeb-Bold.woff') format('truetype'); /* Specify the file and format */
-  font-weight: bold; /* Regular weight */
-  font-style: normal; /* Regular style */
-}
+   /* =========================================
+   Content Container for Image and Links
+   ========================================= */
 
-
-:root {
-  --background-color: #E5E2E1;
-  --semi-background-color: rgba(229, 226, 225, 0.8);
-  --text-color: #333333;
-  --button-color: #ddd;
-  --button-hover-color: #bbb;
-  --font-family: 'Unica', sans-serif;
-  --bold-font-family: 'Unica Bold', sans-serif;
-  --menu-font-family: 'Pitch Sans', sans-serif;
-  --link-color: #00223A;
-  --alt_font-family: 'Georgia', serif;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--font-family);
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  padding-top: 60px; /* Accounts for fixed menubar */
-  font-size: clamp(1rem, 1.5vw, 1.1rem); /* Dynamic font scaling */
-}
-.index-page {
-  margin: 0;
-  padding: 0;
-  /* Set the background image */
-  background-image: url('./images/image_1_bg.jpg');
-  /* Ensure the image covers the entire background area */
-  background-size: cover;
-  /* Center the image */
-  background-position: center center;
-  /* Prevent the image from repeating */
-  background-repeat: no-repeat;
-  /* Optional: Keep the background fixed during scroll */
-  /* background-attachment: fixed; */
-}
-
-/* Portfolio container */
-.portfolio {
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
-  max-width: 900px;
-  padding: 20px;
-  gap: 20px;
+  max-width: 90vw; /* Match the image's max-width */
+  width: 100%;
 }
 
-/* Image container */
+/* =========================================
+   Links Container Styling
+   ========================================= */
+
+.links-container {
+  width: 100%; /* Inherit the width from .content-container */
+  margin-top: 20px; /* Space between image (or description) and links */
+}
+
+
+/* =========================================
+   Image Container and Image Styling
+   ========================================= */
+
 .image-container {
-  position: relative; /* Allows positioning of arrows */
-  max-width: 90%; /* Limits width so there is space for buttons */
+  position: relative; /* Allows positioning of arrows if any */
+  width: 100%;
+  max-width: 90vw; /* Ensures consistency with .content-container */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image {
-  max-width: 95%; /* Keeps image within container */
-  max-height: 80vh;
-  object-fit: contain;
+.image-container img {
+  width: 100%;
+  height: auto;
   border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
   border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
   border-bottom: 8px solid white; /* Bottom white stroke */
@@ -99,269 +437,133 @@ body {
   border-radius: 5px; /* Optional: rounded corners */
 }
 
-.index_image {
-    width: 100%; /* Adjust width to fully span the container */
-    max-width: 90%; /* Limit the max width within the container */
-    max-height: 60vh; /* Keep a max height to avoid overly tall images */
-    object-fit: contain;
-    border-radius: 5px; /* Optional rounded corners */
+/* =========================================
+   Content Shell Container (General Centering)
+   ========================================= */
+
+.content_shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Optical centering */
+  max-width: 80%;
+  transform: translateY(calc(-1 * var(--optical-center-offset)));
+  background-color: var(--background-color);
+  padding-bottom: 120px; /* Prevents content from being hidden behind controls */
 }
 
+/* =========================================
+   Portfolio Art Container (Specific to film.html)
+   ========================================= */
 
-/* Navigation buttons positioned on either side */
-.arrow {
-  position: relative;
-  top: 47%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+.portfolio_art {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Optical centering */
+  min-height: 100vh;
+  transform: translateY(calc(-1 * var(--optical-center-offset)));
+  background-color: var(--background-color);
+  padding-top: 0%; /* Accounts for fixed menubar */
+  padding-bottom: 120px; /* Prevents content from being hidden behind controls */
+}
+
+/* =========================================
+   Navigation Buttons Styling - Fixed to Bottom
+   ========================================= */
+
+.controls {
+  position: fixed; /* Fixes the position relative to the viewport */
+  bottom: 20px; /* Positions the controls 20px from the bottom */
+  left: 50%; /* Centers the controls horizontally */
+  transform: translateX(-50%); /* Adjusts for the 50% left positioning to truly center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Spacing between controls */
+  background-color: rgba(229, 226, 225, 0.8); /* Semi-transparent background for visibility */
+  padding: 10px 20px; /* Padding for better click targets and aesthetics */
+  border-radius: 10px; /* Rounded corners for the controls container */
+  z-index: 1001; /* Ensures controls are above other content but below overlays */
+}
+
+.controls img.arrow {
   width: clamp(40px, 5vw, 60px); /* Responsive button size */
   height: clamp(40px, 5vw, 60px);
   cursor: pointer;
   border-radius: 50%;
-  transition: transform 0.1s ease;
-  margin: 0 10px; /* Adds a 20px gap between the buttons (10px on each side) */
+  transition: opacity 0.3s ease, transform 0.1s ease;
 }
 
-
-
-.arrow:active {
-  transform: translateY(-50%) scale(0.95); /* Shrink on click */
+.controls img.arrow:hover {
+  opacity: 0.8; /* Hover effect */
 }
 
-/* Menubar styling */
-.menu-bar {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-  background-color: rgba(245, 243, 242, 0.4);
-  border-bottom: 1px solid #ddd;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+.controls img.arrow:active {
+  transform: scale(0.95); /* Slight shrink on click for feedback */
 }
 
-.menu-item {
-  font-family: var(--menu-font-family);
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-transform: uppercase; /* Makes text all caps */
+/* =========================================
+   Description Styling
+   ========================================= */
+
+.description {
+  max-height: 20vh; /* Limits height to 20% of viewport */
+  overflow-y: auto; /* Allows scrolling if content exceeds max-height */
+  max-width: 65ch; /* Limits line length to 65 characters */
+  margin: 1em auto;
+  padding: 0 1em;
+  text-align: center;
 }
 
-.menu-item:hover {
-  color: #666666;
-}
+/* =========================================
+   Content Container for Image and Links
+   ========================================= */
 
-/* Controls: Fixed position at the bottom with opacity */
-.controls {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+   .content-container {
     display: flex;
-    justify-content: center; /* Center the buttons within the container */
-    background-color: rgba(229, 226, 225, 0.8);
-    padding: 10px 0;
-    z-index: 100;
-  }
-  
-  /* Description: Scrollable container */
-  .description {
-    font-size: clamp(0.8rem, 1.2vw, 1rem);
-    line-height: 1.5;
-    padding: 10px;
-    text-align: center;
-    width: 80%;
-    max-height: 30vh; /* Limits height to allow for scrolling */
-    overflow-y: auto; /* Enables scrolling for long text */
-    margin-bottom: 60px; /* Adds space above fixed controls */
-  }
-
-/* Writing list item styling */
-.writing-list-item {
-    display: block;
-    width: 100%;
-    padding: 5px 0 30px 0; /* Closer to the top line, more space below */
-    color: var(--text-color);
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    font-weight: 600;
-    text-decoration: none;
-    border-top: 2px solid var(--text-color); /* Line above each item */
-    transition: color 0.3s ease;
-    text-align: left; /* Align text to the left */
-  }
-  
-  .writing-list-item:hover {
-    color: #00628C; /* Hover color */
-  }
-
-  .film-description {
-    font-size: clamp(.9rem, 1.3vw, 1rem);
-    line-height: 1.6;
-    color: var(--text-color);
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    max-width: 75%; /* 80% of the parent container's width */
-    margin-left: auto; /* Center aligns the element */
-    margin-right: auto; /* Center aligns the element */
-}
-
-.about-description {
-  font-size: clamp(.9rem, 1.3vw, 1rem);
-  line-height: 1.6;
-  color: var(--text-color);
-  text-align: left;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  max-width: 65ch; /* Limits the text to approximately 65 characters per line */
-  margin-left: auto; /* Center aligns the element */
-  margin-right: auto; /* Center aligns the element */
-}
-
-.film-image {
-    max-width: 95%; /* Keeps image within container */
-    max-height: 40vh;
-    object-fit: contain;
-    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
-    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
-    border-bottom: 8px solid white; /* Bottom white stroke */
-    border-top: 8px solid #d3d3d3; /* Top grey stroke */
-    border-radius: 5px; /* Optional: rounded corners */
-  }
-
-  .story-image {
-    max-width: 95%; /* Keeps image within container */
-    max-height: 80vh;
-    object-fit: contain;
-    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
-    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
-    border-bottom: 8px solid white; /* Bottom white stroke */
-    border-top: 8px solid #d3d3d3; /* Top grey stroke */
-    border-radius: 5px; /* Optional: rounded corners */
-  }
-.index_image {
-    width: 100%; /* Adjust width to fully span the container */
-    max-width: 90%; /* Limit the max width within the container */
-    max-height: 60vh; /* Keep a max height to avoid overly tall images */
-    object-fit: contain;
-    border-radius: 5px; /* Optional rounded corners */
-}
-.index_image-container {
-    display: flex;
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add spacing between images */
-    max-width: 80%; /* Keeps images within the container width */
-    margin-left: 27%;
-    margin-top: 7%;
-}
+    max-width: 90vw; /* Match the image's max-width */
+    width: 100%;
+  }
+  
+  /* =========================================
+     Image Container and Image Styling
+     ========================================= */
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-left: 8px solid rgb(243, 243, 243);
+    border-right: 8px solid rgb(243, 243, 243);
+    border-bottom: 8px solid white;
+    border-top: 8px solid #d3d3d3;
+    border-radius: 5px;
+  }
+  
+  /* =========================================
+     Links Container Styling
+     ========================================= */
+  
+  .links-container {
+    width: 100%; /* Inherit the width from .content-container */
+    max-width: 90vw; /* Match the image's max-width */
+    margin-top: 20px;
+    
+    /* No changes to background color, padding, etc. */
+  }
 
-/* Global link styles */
-a {
-  color: var(--link-color); /* Default link color */
-  text-decoration: none; /* Remove underline */
-  font-family: var(--bold-font-family);
-}
-
-/* Visited link styles */
-a:visited {
-  color: var(--link-color); /* Change the color for visited links */
-}
-
-/* Optional: Add hover and active states for interactivity */
-a:hover {
-  color: var(--link-color); /* Change color on hover */
-  text-decoration: underline; /* Underline on hover */
-}
-
-a:active {
-  color: #cc0000; /* Change color when the link is clicked */
-}
-
-/* Overlay container */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--semi-background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure overlay is on top */
-}
-
-/* Overlay content */
-/* Overlay container */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--semi-background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure overlay is on top */
-}
-
-/* Overlay content */
-.overlay-content {
-  position: relative;
-  width: 80%;
-  max-width: 1000px;
-  margin: auto;
-  background-color: var(--semi-background-color);
-  padding: 20px;
-  overflow-y: auto;
-  max-height: 90%;
-  border-radius: 8px;
-
-  /* Hide scrollbar */
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
-}
-
-.overlay-content::-webkit-scrollbar {
-  display: none;  /* For Chrome, Safari, and Opera */
-}
-
-/* Close button */
-/* Close button */
-.close-button {
-  position: absolute;
-  top: -10px;    /* Move the button closer to the top */
-  right: -10px; /* Move the button closer to the right edge */
-  font-size: 48px; /* Increase the font size to make it bigger */
-  background: none;
-  border: none;
-  color: #aaa;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: #000;
-}
-
-/* Gallery grid */
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.gallery-grid img {
-  width: calc(25% - 10px); /* Four images per row */
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.gallery-grid img:hover {
-  opacity: 0.8;
-}
+  body.index-page {
+    background: url('./images/image_1_bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }

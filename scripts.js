@@ -75,6 +75,9 @@ function updateImage(index) {
   window.history.pushState({ path: newUrl }, '', newUrl);
 
   console.log('URL updated to:', newUrl);
+
+  // Adjust layout after updating content
+  adjustLayout();
 }
 
 // Function to open the gallery overlay
@@ -173,10 +176,56 @@ function initializePage() {
   initGalleryOverlay();
 }
 
+// Function to adjust layout based on viewport and content sizes
+function adjustLayout() {
+  // Get viewport height
+  const viewportHeight = window.innerHeight;
+
+  // Get the optical center offset percentage from CSS variable
+  const opticalCenterOffsetPercentage = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--optical-center-offset'));
+
+  // Calculate optical center offset in pixels
+  const opticalCenterOffset = viewportHeight * (opticalCenterOffsetPercentage / 100);
+
+  // Calculate available height for content
+  const availableHeight = viewportHeight - opticalCenterOffset;
+
+  // Get elements
+  const image = document.getElementById('image');
+  const description = document.getElementById('description');
+  const controls = document.querySelector('.controls');
+
+  // Get actual heights of description and controls
+  const descriptionHeight = description.offsetHeight;
+  const controlsHeight = controls.offsetHeight;
+
+  // Define margins and paddings (adjust as needed)
+  const margins = 40; // Total vertical margins/padding in pixels
+
+  // Calculate available height for image
+  const availableImageHeight = availableHeight - descriptionHeight - controlsHeight - margins;
+
+  // Set max-height of the image
+  image.style.maxHeight = availableImageHeight + 'px';
+  image.style.width = 'auto';
+  image.style.height = 'auto';
+
+  // Log calculations (for debugging)
+  console.log('Viewport Height:', viewportHeight);
+  console.log('Optical Center Offset:', opticalCenterOffset);
+  console.log('Available Height:', availableHeight);
+  console.log('Description Height:', descriptionHeight);
+  console.log('Controls Height:', controlsHeight);
+  console.log('Available Image Height:', availableImageHeight);
+}
+
 // On DOMContentLoaded, start loading images
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded event fired');
   loadImages();
+
+  // Adjust layout after initial load
+  adjustLayout();
 });
 
 // Handle browser's back/forward navigation
@@ -184,4 +233,54 @@ window.addEventListener('popstate', (event) => {
   console.log('popstate event fired');
   currentIndex = getImageIndexFromURL();
   updateImage(currentIndex);
+});
+
+// Adjust layout on window resize
+window.addEventListener('resize', adjustLayout);
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
+  
+  // Image Swap Functionality
+  const imageSwaps = {
+    image1: { hover: './images/story_out.png', default: './images/story_in.png' },
+    image2: { hover: './images/art_out.png', default: './images/art_in.png' },
+    image3: { hover: './images/design_out.png', default: './images/design_in.png' },
+    image4: { hover: './images/film_out.png', default: './images/film_in.png' },
+    image5: { hover: './images/buckhouse_out.png', default: './images/buckhouse_in.png' },
+  };
+
+  for (const [id, paths] of Object.entries(imageSwaps)) {
+    const imgElement = document.getElementById(id);
+    if (!imgElement) {
+      console.warn(`Image with ID '${id}' not found`);
+      continue;
+    }
+
+    // Add hover effect to swap images
+    imgElement.addEventListener('mouseover', () => {
+      imgElement.src = paths.hover;
+    });
+
+    imgElement.addEventListener('mouseout', () => {
+      imgElement.src = paths.default;
+    });
+  }
+
+  // Keyboard Shortcuts for Navigation
+  const shortcuts = {
+    KeyA: 'art.html',
+    KeyS: 'story.html',
+    KeyD: 'design.html',
+    KeyF: 'film.html',
+    KeyG: 'about.html',
+  };
+
+  document.addEventListener('keydown', (event) => {
+    const page = shortcuts[event.code];
+    if (page) {
+      console.log(`Navigating to ${page}`);
+      window.location.href = page;
+    }
+  });
 });
