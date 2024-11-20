@@ -543,7 +543,7 @@
       .menu-bar {
         display: flex;
         justify-content: center;
-        gap: clamp(10px, 1.5vw, 20px); /* Responsive gap: min 8px, max 20px */
+        gap: clamp(12px, 1.5vw, 20px); /* Responsive gap: min 8px, max 20px */
         padding: 10px 0;
         background-color: rgba(245, 243, 242, 0.4);
         border-bottom: 1px solid #ddd;
@@ -556,7 +556,7 @@
       
       .menu-item {
         font-family: var(--menu-font-family);
-        font-size: clamp(0.7rem, 1.2vw, 1rem);
+        font-size: clamp(0.6rem, 1.2vw, 1rem);
         color: var(--text-color);
         text-decoration: none;
         padding-top: 8px;
