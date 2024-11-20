@@ -43,7 +43,7 @@
      --menu-font-family: 'Pitch Sans', sans-serif;
      --link-color: #00223A;
      --alt_font-family: 'Georgia', serif;
-     --optical-center-offset: 5%; /* Adjust this value to fine-tune positioning */
+     --optical-center-offset: 0%; /* Adjust this value to fine-tune positioning */
    }
    
    /* =========================================
@@ -57,8 +57,7 @@
      display: flex;
      justify-content: center;
      margin: 0;
-     min-height: 100vh;
-     padding-top: 60px; /* Accounts for fixed menubar */
+     padding-top: 0px; /* Accounts for fixed menubar */
      font-size: clamp(.7rem, .8vw, 1.1rem); /* MIN, IDEAL, MAX Dynamic font scaling */
    }
    
@@ -108,7 +107,17 @@
       max-width: 80%; /* Constrain overall width */
       background-color: var(--background-color); /* Keep background */
     }
-   }
+
+    .about_content_shell {
+      margin: 0 auto; /* Centers content horizontally */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center children vertically */
+      justify-content: center; /* Center children horizontally */
+      max-width: 80%; /* Constrain overall width */
+      background-color: var(--background-color); /* Keep background */
+      padding-top: 80px;
+    }
 
    .story_shell {
     margin: 0 auto; /* Centers content horizontally */
@@ -181,41 +190,7 @@
      border-radius: 5px; /* Optional rounded corners */
    }
    
-   /* =========================================
-      Navigation Buttons Styling - Fixed to Bottom
-      ========================================= */
-   
-   .controls {
-     position: fixed; /* Fixes the position relative to the viewport */
-     bottom: 20px; /* Positions the controls 20px from the bottom */
-     left: 50%; /* Centers the controls horizontally */
-     transform: translateX(-50%); /* Adjusts for the 50% left positioning to truly center */
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 20px; /* Spacing between controls */
-     background-color: rgba(229, 226, 225, 0.8); /* Semi-transparent background for visibility */
-     padding: 10px 20px; /* Padding for better click targets and aesthetics */
-     border-radius: 10px; /* Rounded corners for the controls container */
-     z-index: 1001; /* Ensures controls are above other content but below overlays */
-   }
-   
-   .controls img.arrow {
-     width: clamp(40px, 5vw, 60px); /* Responsive button size */
-     height: clamp(40px, 5vw, 60px);
-     cursor: pointer;
-     border-radius: 50%;
-     transition: opacity 0.3s ease, transform 0.1s ease;
-   }
-   
-   .controls img.arrow:hover {
-     opacity: 0.8; /* Hover effect */
-   }
-   
-   .controls img.arrow:active {
-     transform: scale(0.95); /* Slight shrink on click for feedback */
-   }
-   
+ 
    /* =========================================
       Description Styling
       ========================================= */
@@ -258,10 +233,10 @@
      font-size: clamp(.9rem, 1.3vw, 1rem);
      line-height: 1.6;
      color: var(--text-color);
-     text-align: center;
+     text-align: left;
      margin-top: 15px;
      margin-bottom: 15px;
-     max-width: 75%; /* 75% of the parent container's width */
+     max-width: 70%; /* 75% of the parent container's width */
      margin-left: auto; /* Center aligns the element */
      margin-right: auto; /* Center aligns the element */
    }
@@ -470,8 +445,12 @@
   gap: 20px; /* Spacing between controls */
   background-color: rgba(229, 226, 225, 0.8); /* Semi-transparent background for visibility */
   padding: 10px 20px; /* Padding for better click targets and aesthetics */
-  border-radius: 10px; /* Rounded corners for the controls container */
   z-index: 1001; /* Ensures controls are above other content but below overlays */
+  border-left: 2px solid rgb(243, 243, 243); /* Left near-white stroke */
+  border-right: 2px solid rgb(243, 243, 243); /* Right near-white stroke */
+  border-bottom: 2px solid white; /* Bottom white stroke */
+  border-top: 2px solid #d3d3d3; /* Top grey stroke */
+  border-radius: 10px; /* Optional: rounded corners */
 }
 
 .controls img.arrow {

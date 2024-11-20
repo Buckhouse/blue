@@ -5,29 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
+    <!-- Icon Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.338.0/lucide.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .social-links {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin-top: 2rem;
+          margin-left: -60px; /* Added negative margin to shift left */
+          max-width: 600px; /* Constrains the width for better layout */
+        }
+        
+        .social-link {
+          display: flex;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          border-radius: 0.3rem;
+          transition: all 0.2s;
+        }
+        
+        .social-link span {
+          margin-left: 0.5rem;
+          white-space: nowrap; /* Prevents text wrapping */
+        }
+        
+        .social-link:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          transform: translateY(-2px);
+        }
+        
+        .social-link i, 
+        .social-link svg {
+          width: 20px;
+          height: 20px;
+          padding-top: 8px; /* Removed extra padding */
+        }
+        
+        /* Media query for mobile devices */
+        @media (max-width: 600px) {
+          .social-links {
+            grid-template-columns: repeat(2, 1fr); /* Changes to 2 columns on small screens */
+          }
+        }
+        
+        .social-link.linkedin { color: #00223A; }
+        .social-link.twitter { color: #00223A; }
+        .social-link.instagram { color: #00223A; }
+        .social-link.readcv { color: #00223A; }
+        .social-link.delphi { color: #00223A; }
+        .social-link.newsletter { color: #00223A; }
+        
+        .social-link:hover i, 
+        .social-link:hover svg {
+          transform: scale(1.1);
+        }
+      </style>
   </head>
   <body>
-    <body>
-        <!-- Reusable Menubar -->
-        <div class="menu-bar">
-            <a href="index.html" class="menu-item">•</a>
-            <a href="art.html" class="menu-item">Art</a>
-            <a href="story.html" class="menu-item">Story</a>
-            <a href="design.html" class="menu-item">Design</a>
-            <a href="film.html" class="menu-item">Film</a>
-            <a href="about.html" class="menu-item">Buckhouse</a>
-          </div>
-          
-          <div class="content_shell">
-            <!-- Image Section -->
+    <!-- Navigation -->
+    <div class="menu-bar">
+        <a href="index.html" class="menu-item">⌂</a>
+      <a href="art.html" class="menu-item">Art</a>
+      <a href="story.html" class="menu-item">Story</a>
+      <a href="design.html" class="menu-item">Design</a>
+      <a href="film.html" class="menu-item">Film</a>
+      <a href="about.html" class="menu-item">Buckhouse</a>
+    </div>
     
-              <p class="about-description">
-                James Buckhouse believes story, art, and design can bend the arc of humanity’s progress, if you do it right, and brings that idea into everything he does: from movies to startups to paintings to books and to <a href = "https://www.instagram.com/p/CG6c1ijpwIo/">ballets</a>. 
+    <!-- Main Content -->
+    <div class="about_content_shell">
+      <!-- Bio Section -->
+      <p class="about-description">
+        BIO
+        <br><br>James Buckhouse believes story, art, and design can bend the arc of humanity's progress, if you do it right, and brings that idea into everything he does: from movies to startups to paintings to books and to <a href="https://www.instagram.com/p/CG6c1ijpwIo/">ballets</a>. 
+        <br><br>As an artist, he has exhibited at the <a href="https://whitney.org/artists/t3540">Whitney Biennial</a>, the Solomon R. Guggenheim's Works & Process Series, The Institute of Contemporary Art in London, The Berkeley Art Museum, and the Dia Center. He has collaborated with leading choreographers at the New York City Ballet, San Francisco Ballet, LA Dance Project, Oregon Ballet Theatre, and Pennsylvania Ballet. 
+        <br><br>As <a href="https://www.sequoiacap.com/people/james-buckhouse/">Design Partner</a> at Sequoia, he <a href="https://www.sequoiacap.com/article/seven-questions-with-james-buckhouse/">works with founders</a> from idea to IPO and beyond to help them design their companies, products, cultures, and businesses. Buckhouse got his start in <a href="film.html">film</a>, lensing shots, crafting character arcs, and punching up story for some of the biggest film franchises, including the <a href="film.html">Shrek, Madagascar, and Matrix</a> series. Today he is a sought-after writer and collaborator for some of Hollywood's most creative producers and directors. 
+        <br><br>Buckhouse regularly guest lectures at <a href="https://buckhouse.medium.com/the-structure-of-story-reading-list-fa8308a87860">Harvard's Graduate School of Design</a>, Yale School of Architecture, <a href="https://www.youtube.com/watch?v=hG5i05kRYmk">Stanford's Graduate School of Business</a>, and Stanford's d.school. Prior to joining Sequoia in 2014, he was the <a href="https://medium.com/design-story/story-map-3cc64033128e">Senior Experience Architect at Twitter</a>, with <a href="https://read.cv/buckhouse">patents for single-tap emoji replies, opinion polls on social</a>, and more once-novel interactions that are now commonplace. He has a B.A. in Visual Art from Brown University.</p>
 
-<br><br>As an artist, he has exhibited at the <a href="https://whitney.org/artists/t3540">Whitney Biennial</a>, the Solomon R. Guggenheim’s Works & Process Series, The Institute of Contemporary Art in London, The Berkeley Art Museum, and the Dia Center. He has collaborated with leading choreographers at the New York City Ballet, San Francisco Ballet, LA Dance Project, Oregon Ballet Theatre, and Pennsylvania Ballet. 
-<br><br>As <a href="https://www.sequoiacap.com/people/james-buckhouse/">Design Partner</a> at Sequoia, he <a href="https://www.sequoiacap.com/article/seven-questions-with-james-buckhouse/">works with founders</a> from idea to IPO and beyond to help them design their companies, products, cultures, and businesses. Buckhouse got his start in <a href="film.html">film</a>, lensing shots, crafting character arcs, and punching up story for some of the biggest film franchises, including the <a href="film.html">Shrek, Madagascar, and Matrix</a> series. Today he is a sought-after writer and collaborator for some of Hollywood’s most creative producers and directors. 
-<br><br>Buckhouse regularly guest lectures at <a href="https://buckhouse.medium.com/the-structure-of-story-reading-list-fa8308a87860">Harvard’s Graduate School of Design</a>, Yale School of Architecture, <a href ="https://www.youtube.com/watch?v=hG5i05kRYmk">Stanford’s Graduate School of Business</a>, and Stanford’s d.school. Prior to joining Sequoia in 2014, he was the <a href = "https://medium.com/design-story/story-map-3cc64033128e">Senior Experience Architect at Twitter</a>, with <a href = "https://read.cv/buckhouse">patents for single-tap emoji replies, opinion polls on social</a>, and more once-novel interactions that are now commonplace. He has a B.A. in Visual Art from Brown University.</p>
+      <!-- Updated Social Links -->
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/jamesbuckhouse/" class="social-link linkedin" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="linkedin"></i>
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://x.com/buckhouse" class="social-link twitter" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="twitter"></i>
+          <i class="fab fa-x-twitter"></i>
+          <span>Twitter</span>
+        </a>
+        <a href="https://www.instagram.com/buckhouse/" class="social-link instagram" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="instagram"></i>
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <a href="https://read.cv/buckhouse" class="social-link readcv" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="file-text"></i>
+          <i class="fas fa-file-alt"></i>
+          <span>Read.cv</span>
+        </a>
+        <a href="https://www.delphi.ai/buckhouse" class="social-link delphi" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="globe"></i>
+          <i class="fas fa-globe"></i>
+          <span>Delphi</span>
+        </a>
+        <a href="https://jamesbuckhouse.substack.com/" class="social-link newsletter" target="_blank" rel="noopener noreferrer">
+          <i data-lucide="newspaper"></i>
+          <i class="fas fa-newspaper"></i>
+          <span>Newsletter</span>
+        </a>
+      </div>
+    </div>
 
-        </body>
-        <script src="scripts.js"></script>
+    <!-- Scripts -->
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+      
+      // Hide Font Awesome icons if Lucide loads successfully
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.querySelector('[data-lucide]')) {
+          document.querySelectorAll('.fab, .fas').forEach(icon => {
+            icon.style.display = 'none';
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
