@@ -120,15 +120,46 @@
       padding-bottom: 400px;
     }
 
-   .story_shell {
-    margin: 0 auto; /* Centers content horizontally */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center children vertically */
-    justify-content: center; /* Center children horizontally */
-    max-width: 80%; /* Constrain overall width */
-    background-color: var(--background-color); /* Keep background */
-  }
+    .story_shell {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 80%;
+ 
+      padding-bottom: 200px;
+    }
+    
+    /* Main paragraph text in story shell */
+    .story_shell > p {
+      max-width: 800px; /* Match the width of links container */
+      width: 90%; /* Match the width of writing-list-items */
+      margin: 20px auto;
+      text-align: left;
+    }
+    
+    /* Links container */
+    .links-container {
+      width: 90%; /* Match the width of the paragraph */
+      max-width: 800px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the left */
+    }
+    
+    /* Individual link items */
+    .writing-list-item {
+      width: 100%; /* Take full width of container */
+      padding: 5px 0 30px 0;
+      color: var(--text-color);
+      font-size: clamp(0.9375rem, 1.5vw, 1.2rem);
+      font-weight: 600;
+      text-decoration: none;
+      border-top: 2px solid var(--text-color);
+      transition: color 0.3s ease;
+      text-align: left;
+    }
    
    /* =========================================
       Portfolio Art Container (Specific to art.html)
@@ -211,7 +242,7 @@
    
    .writing-list-item {
      display: block;
-     width: 90%;
+     width: 100%;
      padding: 5px 0 30px 0; /* Closer to the top line, more space below */
      color: var(--text-color);
      font-size: clamp(1rem, 2vw, 1.2rem);
@@ -230,17 +261,18 @@
       Specific Description Styling
       ========================================= */
    
-   .film-description {
-    font-size: clamp(.7rem, 1vw, 1rem);
-     line-height: 1.6;
-     color: var(--text-color);
-     text-align: left;
-     margin-top: 15px;
-     margin-bottom: 15px;
-     max-width: 70%; /* 75% of the parent container's width */
-     margin-left: auto; /* Center aligns the element */
-     margin-right: auto; /* Center aligns the element */
-   }
+      .film-description {
+        line-height: 1.6;
+        color: var(--text-color);
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 70%; /* Match the width of links container */
+        max-width: 800px; /* Match max-width of other elements */
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(.9rem, 1.3vw, 1rem);
+      }
    
    .about-description {
      font-size: clamp(.9rem, 1.3vw, 1rem);
