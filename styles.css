@@ -84,6 +84,7 @@
      font-size: clamp(0.8rem, 1.5vw, 1rem);
      color: var(--text-color);
      text-decoration: none;
+     padding-top: 8px;
      font-weight: 500;
      transition: color 0.3s ease;
      text-transform: uppercase; /* Makes text all caps */
@@ -564,4 +565,26 @@
   body.index-page {
     background: url('./images/image_1_bg.jpg') no-repeat center center fixed;
     background-size: cover;
+  }
+
+  .menu-bar .newsletter-button {
+    background-color: #00223A;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: var(--menu-font-family);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-transform: uppercase; /* Makes text all caps */
+    border: 2px solid var(--link-color);
+  }
+  
+  /* Hover styles with matching specificity */
+  .menu-bar .newsletter-button:hover {
+    background-color: #f0e9e9;
+    color: #00223A !important; /* Light blue */
+    text-decoration: none !important;
+    box-sizing: border-box; /* Makes border go inward */
+    border: 2px solid var(--link-color); /* Border color matches hover text color */
   }
