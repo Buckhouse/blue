@@ -117,6 +117,7 @@
       max-width: 80%; /* Constrain overall width */
       background-color: var(--background-color); /* Keep background */
       padding-top: 80px;
+      padding-bottom: 400px;
     }
 
    .story_shell {
