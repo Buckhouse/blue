@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athenaeum</title>
+    <link rel="stylesheet" href="css/courses.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+     <div class="menu-bar">
+        <a href="index.html" class="menu-item">✎ Art</a>
+        <a href="design.html" class="menu-item">☎ 24-hour Design Hotline</a>
+        <a href="library.html" class="menu-item">📖 Library</a>
+        <a href="film.html" class="menu-item">🎬 Film</a>
+        <a href="about.html" class="menu-item">👤 Buckhouse</a>
+        <a href="https://jamesbuckhouse.substack.com/" class="newsletter-button" target="_blank" rel="noopener noreferrer">Newsletter</a>
+    </div>
+    <div class="container">
+        <h1>Library</h1>
+        <p class="description">I put together this small athenaeum of courses and resources collected from across the internet. Some of these I've created, others are from other people. <a href="https://airtable.com/appqB1VAs2ZN5Df6j/pagOX4Og9v5aytpYf/form" target="_blank" rel="noopener noreferrer">Please suggest a new course or resource</a>.</p>
+        <div class="filter-buttons">
+            <!-- Buttons will be dynamically generated here -->
+        </div>
+
+        <div id="timeline" class="timeline">
+            <!-- Course items will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM fully loaded and parsed');
+        
+            Papa.parse('data/csv/courses.csv', {
+                download: true,
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    console.log('CSV Parsing complete');
+                    console.log('Parsed data:', results.data);
+        
+                    const timelineData = results.data;
+                    const timelineContainer = document.getElementById('timeline');
+        
+                    if (!timelineContainer) {
+                        console.error('Element with ID "timeline" not found');
+                        return;
+                    }
+        
+                    // Generate categories set
+                    const categoriesSet = new Set();
+                    timelineData.forEach(item => {
+                        if (item.Category) {
+                            item.Category.split(',').forEach(cat => {
+                                const trimmedCat = cat.trim();
+                                categoriesSet.add(trimmedCat);
+                            });
+                        }
+                    });
+        
+                    console.log('All categories:', Array.from(categoriesSet));
+        
+                    // Generate filter buttons
+                    const filterButtonsContainer = document.querySelector('.filter-buttons');
+                    if (!filterButtonsContainer) {
+                        console.error('Element with class "filter-buttons" not found');
+                        return;
+                    }
+        
+                    filterButtonsContainer.innerHTML = '';
+        
+                    // 'All' button
+                    const allButton = document.createElement('button');
+                    allButton.className = 'filter-btn active';
+                    allButton.setAttribute('data-filter', 'all');
+                    allButton.textContent = 'All';
+                    filterButtonsContainer.appendChild(allButton);
+        
+                    // Category buttons
+                   // Generate Category Buttons
+                   categoriesSet.forEach(category => {
+                        const button = document.createElement('button');
+                        const categoryClass = category.toLowerCase().replace(/\s+/g, '-');
+                        button.className = `filter-btn ${categoryClass}`;
+                        button.setAttribute('data-filter', categoryClass);
+                        button.textContent = category;
+                        filterButtonsContainer.appendChild(button);
+                        console.log(`Created button with class: filter-btn ${categoryClass}`);
+                    });
+        
+                    // Render courses
+                    timelineData.forEach(item => {
+                    if (item.Title && item.Category) {
+                        const timelineItem = document.createElement('a'); // Wrap the entire item in <a>
+                        const categories = item.Category.split(',').map(cat =>
+                            cat.trim().toLowerCase().replace(/\s+/g, '-')
+                        );
+                        timelineItem.className = `timeline-item ${categories.join(' ')}`;
+                        timelineItem.href = item.URL || '#'; // Use the Learn more URL
+                        timelineItem.target = '_blank'; // Open in a new tab
+                        timelineItem.rel = 'noopener noreferrer'; // Security best practices
+                        timelineItem.innerHTML = `
+                            <div class="timeline-content">
+                                <h3>${item.Title}</h3>
+                                <p>${item.Instructor || 'Unknown'}<br>${item.Institution || 'Not specified'}</p>
+                                <p>${item.Description}</p>
+                                ${
+                                    item.URL
+                                        ? `<span class="learn-more">Learn more</span>`
+                                        : ''
+                                }
+                            </div>
+                        `;
+                        timelineContainer.appendChild(timelineItem);
+                    }
+                });
+                    // Attach event listeners to filter buttons
+                    const filterButtons = document.querySelectorAll('.filter-btn');
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const filter = this.getAttribute('data-filter').toLowerCase();
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            this.classList.add('active');
+        
+                            const items = document.querySelectorAll('.timeline-item');
+                            items.forEach(item => {
+                                if (filter === 'all' || item.classList.contains(filter)) {
+                                    item.style.display = 'flex';
+                                } else {
+                                    item.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                },
+                error: function(err) {
+                    console.error('Error parsing CSV:', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Buckhouse</title>
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body class="index-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Buckhouse</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Reusable Menubar -->
+  <div class="menu-bar">
+    <a href="index.html" class="menu-item">✎ Art</a>
+    <a href="design.html" class="menu-item">☎ 24-hour Design Hotline</a>
+    <a href="library.html" class="menu-item">📖 Library</a>
+    <a href="film.html" class="menu-item">🎬 Film</a>
+    <a href="about.html" class="menu-item">👤 Buckhouse</a>
+    <a href="https://jamesbuckhouse.substack.com/" class="newsletter-button" target="_blank" rel="noopener noreferrer">Newsletter</a>
+</div>
 
-<script id="delphi-bubble-script">
-  window.delphi = {...(window.delphi ?? {}) };
-  window.delphi.bubble = {
-    config: "750b5c63-4cf8-47d5-945d-9ee7f18bf59f",
-    overrides: {
-      landingPage: "OVERVIEW",
-    },
-    trigger: {
-      color: "#FF6A27",
-    },
-  };
-</script>
+  <script id="delphi-bubble-script">
+    window.delphi = {...(window.delphi ?? {}) };
+    window.delphi.bubble = {
+      config: "750b5c63-4cf8-47d5-945d-9ee7f18bf59f",
+      overrides: {
+        landingPage: "OVERVIEW",
+      },
+      trigger: {
+        color: "#FF6A27",
+      },
+    };
+  </script>
+  
+  <script id="delphi-bubble-bootstrap" src="https://embed.delphi.ai/loader.js"></script>
+  <!-- Portfolio Art Container -->
+  <div class="portfolio_art">
+    <!-- Image Section -->
+    <div class="image-container">
+      <img class="image" id="image" src="" alt=""> <!-- Dynamically loaded image -->
+    </div>
 
-<script id="delphi-bubble-bootstrap" src="https://embed.delphi.ai/loader.js"></script>
-    
-        <div class="index_image-container">
-           <a href="art.html">
-            <img class="index_image" id="image2" src="./images/art_in.png" alt="Art Image">
-        </a>
-         <a href="story.html">
-                <img class="index_image" id="image1" src="./images/story_in.png" alt="Story Image">
-            </a>
-            <!-- Link for Design Image -->
-            <a href="design.html">
-                <img class="index_image" id="image3" src="./images/design_in.png" alt="Design Image">
-            </a>
+    <!-- Description Section -->
+    <div class="description" id="description"></div> <!-- Dynamically loaded description -->
+  </div>
 
-            <!-- Link for Film Image -->
-            <a href="film.html">
-                <img class="index_image" id="image4" src="./images/film_in.png" alt="Film Image">
-            </a>
-            <a href="about.html">
-                <img class="index_image" id="image5" src="./images/buckhouse_in.png" alt="Film Image">
-            </a>
-        </div>
-        <script src="scripts.js"></script>
-    </body>
+  <!-- Navigation Controls -->
+  <div class="controls">
+    <img class="arrow left" src="./images/left.jpg" alt="Previous Image" aria-label="Previous Image">
+    <img class="arrow gallery-button" id="galleryButton" src="./images/gallery_button.jpg" alt="Gallery View" aria-label="Gallery View">
+    <img class="arrow right" src="./images/right.jpg" alt="Next Image" aria-label="Next Image">
+  </div>
+
+  <!-- Gallery Overlay -->
+  <div id="galleryOverlay" class="overlay" style="display: none;">
+    <div class="overlay-content">
+      <button id="closeGalleryButton" class="close-button">&times;</button>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Thumbnails will be dynamically loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- External Script -->
+  <script src="scripts.js"></script>
+</body>
 </html>
-
-<!-- added this line as test -->
