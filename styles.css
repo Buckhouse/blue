@@ -591,3 +591,12 @@
     border: 2px solid var(--link-color); /* Border color matches hover text color */
   }
 
+  .film-video {
+    max-width: 70%; /* Adjust as needed */
+    border-left: 8px solid rgb(243, 243, 243); /* Left near-white stroke */
+    border-right: 8px solid rgb(243, 243, 243); /* Right near-white stroke */
+    border-bottom: 8px solid white; /* Bottom white stroke */
+    border-top: 8px solid #d3d3d3; /* Top grey stroke */
+    border-radius: 5px; /* Optional: rounded corners */
+    object-fit: cover; /* Adjust video scaling within the container */
+  }
