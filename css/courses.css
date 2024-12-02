@@ -415,6 +415,32 @@ button:hover {
         left: 0;
         z-index: 1000;
       }
+
+      .menu-bar {
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        justify-content: center; /* Keeps the items centered */
+        gap: clamp(8px, 1vw, 16px); /* Adjust spacing dynamically */
+    }
+
+    .menu-bar {
+        max-width: 100%;
+        overflow-x: auto; /* Allows horizontal scrolling if needed */
+    }
+
+    @media (max-width: 600px) {
+        .menu-bar {
+            padding: 5px 0;
+            gap: 8px; /* Reduce space between items */
+        }
+        .menu-item, 
+        .menu-bar .newsletter-button {
+            font-size: 0.7rem; /* Shrink font size for smaller screens */
+            padding: 4px 8px; /* Adjust padding */
+        }
+    }
+
+
       
       .menu-item {
         font-family: var(--menu-font-family);
