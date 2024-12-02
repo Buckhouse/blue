@@ -415,24 +415,7 @@ button:hover {
         left: 0;
         z-index: 1000;
       }
-      .menu-bar {
-        flex-wrap: wrap;
-    }
-    .menu-bar {
-      max-width: 100%;
-      overflow-x: auto;
-  }
-
-  @media (max-width: 600px) {
-    .menu-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        display: none; /* Hide menu for smaller screens */
-    }
-    .menu-bar.active {
-        display: flex;
-    }
-}
+      
       .menu-item {
         font-family: var(--menu-font-family);
         font-size: clamp(0.6rem, 1.2vw, 1rem);
