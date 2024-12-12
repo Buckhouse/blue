@@ -429,7 +429,7 @@
   min-height: 100vh;
   transform: translateY(calc(-1 * var(--optical-center-offset)));
   background-color: var(--background-color);
-  padding-top: 0%; /* Accounts for fixed menubar */
+  padding-top: 0px; /* Accounts for fixed menubar */
   padding-bottom: 120px; /* Prevents content from being hidden behind controls */
 }
 
@@ -573,7 +573,7 @@
       
       .menu-item {
         font-family: var(--menu-font-family);
-        font-size: clamp(0.6rem, 1.2vw, 1rem);
+        font-size: clamp(0.8rem, 1.2vw, 1rem);
         color: var(--text-color);
         text-decoration: none;
         padding-top: 8px;
@@ -593,7 +593,7 @@
     padding: 6px 12px;
     border-radius: 20px;
     font-family: var(--menu-font-family);
-    font-size: clamp(0.7rem, 1.2vw, 1rem);
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
     transition: background-color 0.2s ease, color 0.2s ease;
     text-transform: uppercase; /* Makes text all caps */
     border: 2px solid var(--link-color);
@@ -616,4 +616,21 @@
     border-top: 8px solid #d3d3d3; /* Top grey stroke */
     border-radius: 5px; /* Optional: rounded corners */
     object-fit: cover; /* Adjust video scaling within the container */
+  }
+
+  @media (max-width: 620px) {
+    .menu-item .text {
+      display: none;
+    }
+
+    .menu-item {
+      font-family: var(--menu-font-family);
+      font-size: clamp(1rem, 1.2vw, 1rem);
+      color: var(--text-color);
+      text-decoration: none;
+      padding-top: 8px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      text-transform: uppercase; /* Makes text all caps */
+    }
   }
