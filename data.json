@@ -8,19 +8,76 @@
       "media": "Watercolor on paper. 18 in x 24 in"
     },
     {
-        "date": "JAN 2021",
-        "imageURL": "./images/image_61.jpg",
-        "title": "Title of Image 1",
-        "description": "This painting took 25 months to complete. I went blind in one eye and it took over a year for my sight to recover. My vision is now normal, but during that time I had a hard time controlling the tip of my brush so that it might be correctly located in space. Also my sense of color was off, as my blood-filled eye changed the tint of everything. But I did not give up, and wanted to show my kids (and myself) that the answer was to keep going.",
-        "media": "Oil on wood. 18 in x 24 in"
-      },
-    {
         "date": "FEB 2021",
         "imageURL": "./images/image_3.jpg",
         "title": "Title of Image 3",
         "description": "What is the painting equivalent of a double exposure? Or A piece of music that is stubbornly in two keys at once. Or that braided split between story and discourse... what you say and how you say it... can a painting be two things at once? Watercolor on paper. 18 in x 24 in",
       "media": "Watercolor on paper. 18 in x 24 in"
   },
+  {
+    "date": "AUG 2020",
+    "imageURL": "./images/image_4.jpg",
+    "title": "Title of Image 3",
+    "description": "Leaf by leaf, I spent that summer painting this view from inside San Francisco's Conservatory of Flowers. This was a pandemic painting. And somehow the brilliant world inside the hothouse seemed to connect to our paradise and our prision of shared isolation. Famlies grew closer. We learned to look closely at our surroundings. Watercolor on paper. 18 in x 24 in",
+  "media": "Watercolor on paper. 18 in x 24 in"
+},
+    {
+        "date": "JAN 2021",
+        "imageURL": "./images/image_61.jpg",
+        "title": "Title of Image 1",
+        "description": "This painting took 25 months to complete. I went blind in one eye and it took over a year for my sight to recover. My vision is now normal, but during that time I had a hard time controlling the tip of my brush so that it might be correctly located in space. Also my sense of color was off, as my blood-filled eye changed the tint of everything. But I did not give up, and wanted to show my kids (and myself) that the answer was to keep going.",
+        "media": "Oil on wood. 18 in x 24 in"
+      },
+      {
+        "date": "DEC 2024",
+        "imageURL": "./images/image_64-cu.jpg",
+        "title": "Title of Image 1",
+        "description": "Work in progress.",
+        "media": "Oil on wood. 18 in x 24 in"
+      },
+    {
+        "date": "DEC 2024",
+        "imageURL": "./images/image_64.jpg",
+        "title": "Title of Image 1",
+        "description": "Work in progress.",
+        "media": "Oil on wood. 18 in x 24 in"
+      },
+     
+    {
+        "date": "MAY 2018",
+        "imageURL": "./images/image_10.jpg",
+        "title": "Title of Image 2",
+        "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
+        "media": "Oil on Linen. 48 in x 48 in"
+    },
+    {
+        "date": "MAY 2018",
+        "imageURL": "./images/image_63.jpg",
+        "title": "Title of Image 2",
+        "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
+        "media": "Oil on Linen. 48 in x 48 in"
+    },
+    {
+        "date": "SEP 2018",
+        "imageURL": "./images/image_38.jpg",
+        "title": "Title of Image 2",
+        "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. This collapsed house is across the road from the Hotel.",
+        "media": "Oil on Linen. 48 in x 48 in"
+    },
+    {
+        "date": "SEP 2018",
+        "imageURL": "./images/image_52.jpg",
+        "title": "Title of Image 2",
+        "description": "Oil on gessoed wood. My father and I tracked wild mustangs on 1.5 million acres of BLM land to find this running bachelor. Eventually he led us to the rest of the group. What an unforgettable time filming and then painting these marvelous Kiger mustangs.",
+        "media": "Oil on Linen. 48 in x 48 in"
+    },
+    {
+        "date": "MAY 2018",
+        "imageURL": "./images/image_9.jpg",
+        "title": "Title of Image 2",
+        "description": "Abstraction that later set the stage for the visual vocabulary of HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
+      "media": "Colored pencil on paper. 12 in x 12 in"
+    },
   {
     "date": "MAR 2023",
     "imageURL": "./images/image_6.jpg",
@@ -34,13 +91,6 @@
     "title": "Title of Image 2",
     "description": "Watercolor + Digital sketch for an AR dance project",
     "media": "Oil on Linen. 48 in x 48 in"
-},
-  {
-    "date": "AUG 2020",
-    "imageURL": "./images/image_4.jpg",
-    "title": "Title of Image 3",
-    "description": "Leaf by leaf, I spent that summer painting this view from inside San Francisco's Conservatory of Flowers. This was a pandemic painting. And somehow the brilliant world inside the hothouse seemed to connect to our paradise and our prision of shared isolation. Famlies grew closer. We learned to look closely at our surroundings. Watercolor on paper. 18 in x 24 in",
-  "media": "Watercolor on paper. 18 in x 24 in"
 },
 {
     "date": "AUG 2020",
@@ -84,42 +134,6 @@
     "description": "Charcoal sketch of an imaginary wave.",
   "media": "Watercolor on paper. 18 in x 24 in"
 },
-{
-    "date": "MAY 2018",
-    "imageURL": "./images/image_9.jpg",
-    "title": "Title of Image 2",
-    "description": "Abstraction that later set the stage for the visual vocabulary of HOMEWARD, a ballet with Benjamin Millepied and Bryce Dessner.",
-  "media": "Colored pencil on paper. 12 in x 12 in"
-},
-{
-    "date": "MAY 2018",
-    "imageURL": "./images/image_10.jpg",
-    "title": "Title of Image 2",
-    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
-    "media": "Oil on Linen. 48 in x 48 in"
-},
-{
-    "date": "MAY 2018",
-    "imageURL": "./images/image_63.jpg",
-    "title": "Title of Image 2",
-    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
-    "media": "Oil on Linen. 48 in x 48 in"
-},
-{
-    "date": "SEP 2018",
-    "imageURL": "./images/image_38.jpg",
-    "title": "Title of Image 2",
-    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. This collapsed house is across the road from the Hotel.",
-    "media": "Oil on Linen. 48 in x 48 in"
-},
-{
-    "date": "SEP 2018",
-    "imageURL": "./images/image_52.jpg",
-    "title": "Title of Image 2",
-    "description": "Oil on gessoed wood. My father and I tracked wild mustangs on 1.5 million acres of BLM land to find this running bachelor. Eventually he led us to the rest of the group. What an unforgettable time filming and then painting these marvelous Kiger mustangs.",
-    "media": "Oil on Linen. 48 in x 48 in"
-},
-
 {
     "date": "SEP 2018",
     "imageURL": "./images/image_27.jpg",

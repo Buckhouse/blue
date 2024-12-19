@@ -33,6 +33,10 @@ def create_thumbnail(file_path):
 
 # Process all images in the directory
 for filename in os.listdir(directory):
+    if '_thumb' in filename:  # Skip files that already have '_thumb' in their name
+        print(f"Skipping thumbnail: {filename}")
+        continue
+
     file_path = os.path.join(directory, filename)
     if os.path.isfile(file_path) and file_path.endswith(('.jpg', '.jpeg', '.png')):
         create_thumbnail(file_path)
