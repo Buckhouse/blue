@@ -95,14 +95,21 @@
     "date": "MAY 2018",
     "imageURL": "./images/image_10.jpg",
     "title": "Title of Image 2",
-    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but isntead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
+    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
+    "media": "Oil on Linen. 48 in x 48 in"
+},
+{
+    "date": "MAY 2018",
+    "imageURL": "./images/image_63.jpg",
+    "title": "Title of Image 2",
+    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. There is a series of buildings on the site, this is the largest, it is a former hotel.",
     "media": "Oil on Linen. 48 in x 48 in"
 },
 {
     "date": "SEP 2018",
     "imageURL": "./images/image_38.jpg",
     "title": "Title of Image 2",
-    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but isntead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. This collapsed house is across the road from the Hotel.",
+    "description": "Oil on Linen. I traveled with my father to a ghost town in Oregon. It's not on any map, but instead hidden in the middle of a ranch. We went to the ranch, knocked on the door and explained our intentions, and then went to the site. This collapsed house is across the road from the Hotel.",
     "media": "Oil on Linen. 48 in x 48 in"
 },
 {
@@ -283,6 +290,13 @@
     "imageURL": "./images/image_51.jpg",
     "title": "Title of Image 2",
     "description": "Oil on gessoed paper. This dead bird was visible from my window. Look closely and you'll see a fly on its beak.",
+    "media": "Oil on paper. 18 in x 24 in"
+},
+{
+    "date": "JUL 2018",
+    "imageURL": "./images/image_62.jpg",
+    "title": "Title of Image 2",
+    "description": "Oil on gessoed paper. Half-Moon Bay.",
     "media": "Oil on paper. 18 in x 24 in"
 },
 {
