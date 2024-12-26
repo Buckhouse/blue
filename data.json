@@ -30,16 +30,23 @@
       },
       {
         "date": "DEC 2024",
-        "imageURL": "./images/image_64-cu.jpg",
+        "imageURL": "./images/image_65.jpg",
         "title": "Title of Image 1",
-        "description": "Work in progress.",
+        "description": "Stairs.",
         "media": "Oil on wood. 18 in x 24 in"
       },
-    {
+      {
         "date": "DEC 2024",
-        "imageURL": "./images/image_64.jpg",
+        "imageURL": "./images/image_67.jpg",
         "title": "Title of Image 1",
-        "description": "Work in progress.",
+        "description": "Installation view. Oil on panel.",
+        "media": "Oil on wood. 18 in x 24 in"
+      },
+      {
+        "date": "DEC 2024",
+        "imageURL": "./images/image_66.jpg",
+        "title": "Title of Image 1",
+        "description": "Mock-up of this piece on a larger wall.",
         "media": "Oil on wood. 18 in x 24 in"
       },
      
@@ -99,13 +106,6 @@
     "description": "View of Venice of The Bridge of Sighs. That terrible walk from judgement to punishment. We went as a family and quite enjoyed walking that same path. And in that moment, awaiting your fate, those stolen glimpses through the window... caught moments of the poignancy of life. Watercolor on paper. 18 in x 24 in",
   "media": "Watercolor on paper. 18 in x 24 in"
 },
-  {
-        "date": "FEB 2021",
-        "imageURL": "./images/image_2.jpg",
-        "title": "Title of Image 2",
-        "description": "This watercolor painting came out of a shoot fashion designer Lan Jaenicke did with a dancer wearing one of her coats. I quite liked the high color and the cinematic sense of a woman moving through the world like a character in an imaginary novel. She closed her eyes as if she too was imagining the story.",
-      "media": "Watercolor on paper. 18 in x 24 in"
-  },
   {
     "date": "APR 2022",
     "imageURL": "./images/image_7.jpg",
